@@ -50,6 +50,9 @@ struct AuthenticationView: View {
                         
                         Button(action: {
                             // Handle authentication logic here
+                            guard(viewModel.username.contains("@"))else{
+                                return//ajouter une erreur
+                            }
                             viewModel.login()
                         }) {
                             Text("Se connecter")
@@ -63,14 +66,19 @@ struct AuthenticationView: View {
                     .padding(.horizontal, 40)
                 }
         .onTapGesture {
-                    self.endEditing(true)  // This will dismiss the keyboard when tapping outside
-                }
+            self.endEditing(true)  // This will dismiss the keyboard when tapping outside
+        }
+        .alert(isPresented: $viewModel.showingAlert) {
+            Alert(title: Text("Login Failed"), message: Text(viewModel.errorMessage), dismissButton: .default(Text("OK")))
+        }
     }
     
 }
 
-#Preview {
-    AuthenticationView(viewModel: AuthenticationViewModel({
-        
-    }))
+#if DEBUG
+struct AuthenticationView_Previews: PreviewProvider {
+    static var previews: some View {
+        AuthenticationView(viewModel: AuthenticationViewModel(onLoginSucceed: { _ in }, onLoginFailed: { }))
+    }
 }
+#endif

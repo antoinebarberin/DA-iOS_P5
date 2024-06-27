@@ -15,10 +15,16 @@ class AppViewModel: ObservableObject {
     }
     
     var authenticationViewModel: AuthenticationViewModel {
-        return AuthenticationViewModel { [weak self] in
-            self?.isLogged = true
-        }
-    }
+           return AuthenticationViewModel(
+               onLoginSucceed: { [weak self] token in
+                   print("Login succeeded with token: \(token)")
+                   self?.isLogged = true
+               },
+               onLoginFailed: {
+                   print("Login failed")
+               }
+           )
+       }
     
     var accountDetailViewModel: AccountDetailViewModel {
         return AccountDetailViewModel()
