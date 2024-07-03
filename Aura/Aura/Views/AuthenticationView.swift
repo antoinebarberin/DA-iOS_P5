@@ -35,24 +35,12 @@ struct AuthenticationView: View {
                             .font(.largeTitle)
                             .fontWeight(.semibold)
                         
-                        TextField("Adresse email", text: $viewModel.username)
-                            .padding()
-                            .background(Color(UIColor.secondarySystemBackground))
-                            .cornerRadius(8)
-                            .autocapitalization(.none)
-                            .keyboardType(.emailAddress)
-                            .disableAutocorrection(true)
-                        
-                        SecureField("Mot de passe", text: $viewModel.password)
-                            .padding()
-                            .background(Color(UIColor.secondarySystemBackground))
-                            .cornerRadius(8)
+                        EntryFields(placeHolder: "Adresse email", field: $viewModel.username, isSecure: false, prompt: viewModel.emailPrompt)
+
+                        EntryFields(placeHolder: "Mot de passe", field: $viewModel.password, isSecure: true, prompt: viewModel.passwordPrompt)
                         
                         Button(action: {
                             // Handle authentication logic here
-                            guard(viewModel.username.contains("@"))else{
-                                return//ajouter une erreur
-                            }
                             viewModel.login()
                         }) {
                             Text("Se connecter")
@@ -61,7 +49,10 @@ struct AuthenticationView: View {
                                 .padding()
                                 .background(Color.black) // You can also change this to your pastel green color
                                 .cornerRadius(8)
+                            
                         }
+                        .opacity(viewModel.isSignupComplete ? 1 : 0.6)
+                        .disabled(!viewModel.isSignupComplete)
                     }
                     .padding(.horizontal, 40)
                 }
@@ -73,6 +64,34 @@ struct AuthenticationView: View {
         }
     }
     
+}
+
+
+struct EntryFields: View {
+    var placeHolder: String
+    @Binding var field: String
+    var isSecure: Bool = false
+    var prompt: String
+    
+    var body: some View {
+        VStack{
+            if isSecure{
+                SecureField(placeHolder, text: $field).textInputAutocapitalization(.none)
+                    .padding()
+                    .background(Color(UIColor.secondarySystemBackground))
+                    .cornerRadius(8)
+            }else{
+                TextField(placeHolder, text: $field).textInputAutocapitalization(.none)
+                    .padding()
+                    .background(Color(UIColor.secondarySystemBackground))
+                    .cornerRadius(8)
+                    .autocapitalization(.none)
+                    .keyboardType(.emailAddress)
+                    .disableAutocorrection(true)
+            }
+            Text(prompt)
+        }
+    }
 }
 
 #if DEBUG

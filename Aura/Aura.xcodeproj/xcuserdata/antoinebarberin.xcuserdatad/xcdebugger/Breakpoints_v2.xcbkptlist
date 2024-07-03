@@ -30,8 +30,8 @@
             filePath = "Aura/Views/AuthenticationView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -50,50 +50,6 @@
             endingLineNumber = "34"
             landmarkName = "getLoginToken(username:password:callback:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "99566930-6DBC-4FBD-A214-47563E01A259 - d20c5247a4e2cbcb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static Aura.AuthenticationService.getLoginToken(username: Swift.String, password: Swift.String, callback: (Swift.Bool, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Aura"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antoinebarberin/Desktop/Formation%20IOS%20dev/DA-iOS_P5/Aura/Aura/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34">
-               </Location>
-               <Location
-                  uuid = "99566930-6DBC-4FBD-A214-47563E01A259 - 300cd05430a05fd9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static Aura.AuthenticationService.getLoginToken(username: Swift.String, password: Swift.String, callback: (Swift.Bool, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Aura"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antoinebarberin/Desktop/Formation%20IOS%20dev/DA-iOS_P5/Aura/Aura/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34">
-               </Location>
-               <Location
-                  uuid = "99566930-6DBC-4FBD-A214-47563E01A259 - d20c5247a4e2cbea"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static Aura.AuthenticationService.getLoginToken(username: Swift.String, password: Swift.String, callback: (Swift.Bool, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Aura"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antoinebarberin/Desktop/Formation%20IOS%20dev/DA-iOS_P5/Aura/Aura/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -126,36 +82,6 @@
             endingLineNumber = "22"
             landmarkName = "getLoginToken(username:password:callback:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B3C490A7-2D32-46C4-8B81-59058281F37B - 2eaf656d55455bad"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Aura.AuthenticationService.getLoginToken(username: Swift.String, password: Swift.String, callback: (Swift.Bool, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Aura"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antoinebarberin/Desktop/Formation%20IOS%20dev/DA-iOS_P5/Aura/Aura/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22">
-               </Location>
-               <Location
-                  uuid = "B3C490A7-2D32-46C4-8B81-59058281F37B - 2eaf656d55455b4c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Aura.AuthenticationService.getLoginToken(username: Swift.String, password: Swift.String, callback: (Swift.Bool, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Aura"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antoinebarberin/Desktop/Formation%20IOS%20dev/DA-iOS_P5/Aura/Aura/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

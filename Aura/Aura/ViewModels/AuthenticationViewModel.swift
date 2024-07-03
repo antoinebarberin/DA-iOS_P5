@@ -36,4 +36,43 @@ class AuthenticationViewModel: ObservableObject {
             }
         }
     }
+    
+    //validation functions :
+    
+    func isPasswordValid() -> Bool {
+        // cf http://regexlib.com pour les conditions
+        let passWordTest = NSPredicate(format: "SELF MATCHES %@", "(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$")
+        return passWordTest.evaluate(with: password)
+    }
+    
+    func isEmailValid() -> Bool {
+        // cf http://regexlib.com pour les conditions
+        let EmailTest = NSPredicate(format: "SELF MATCHES %@", "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$")
+        return EmailTest.evaluate(with: username)
+    }
+    
+    var isSignupComplete: Bool{
+        if(!isEmailValid() || !isPasswordValid()){
+            return false
+        }
+        return true
+    }
+    
+    //validation prompt strings :
+    
+    var emailPrompt: String{
+        if isEmailValid(){
+            return ""
+        }else{
+            return "Enter a valid email address"
+        }
+    }
+    
+    var passwordPrompt: String{
+        if isPasswordValid(){
+            return ""
+        }else{
+            return "Password must be between 6-15 character and contain at least a letter and a number and no special character"
+        }
+    }
 }
