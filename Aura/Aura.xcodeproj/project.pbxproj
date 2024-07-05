@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F01DA782C3576FC002B5275 /* AccountDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DA772C3576FC002B5275 /* AccountDetailService.swift */; };
 		1FD66F242C29AD73005D5007 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD66F232C29AD73005D5007 /* AuthenticationService.swift */; };
 		53D4187C2AC7099A0070ADB1 /* AuraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D4187B2AC7099A0070ADB1 /* AuraApp.swift */; };
 		53D418802AC7099B0070ADB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D4187F2AC7099B0070ADB1 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F01DA772C3576FC002B5275 /* AccountDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailService.swift; sourceTree = "<group>"; };
 		1FD66F232C29AD73005D5007 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		53D418782AC7099A0070ADB1 /* Aura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D4187B2AC7099A0070ADB1 /* AuraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuraApp.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				1FD66F232C29AD73005D5007 /* AuthenticationService.swift */,
+				1F01DA772C3576FC002B5275 /* AccountDetailService.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				53D4189F2AC717890070ADB1 /* MoneyTransferViewModel.swift in Sources */,
 				53D4188D2AC709F40070ADB1 /* AppViewModel.swift in Sources */,
 				53D418A12AC71B8F0070ADB1 /* View+Extensions.swift in Sources */,
+				1F01DA782C3576FC002B5275 /* AccountDetailService.swift in Sources */,
 				53D418992AC70FD80070ADB1 /* Color+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

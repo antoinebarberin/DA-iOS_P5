@@ -9,16 +9,16 @@ import SwiftUI
 
 struct AccountDetailView: View {
     @ObservedObject var viewModel: AccountDetailViewModel
-    
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         VStack(spacing: 20) {
-            // Large Header displaying total amount
             VStack(spacing: 10) {
                 Text("Your Balance")
                     .font(.headline)
                 Text(viewModel.totalAmount)
                     .font(.system(size: 60, weight: .bold))
-                    .foregroundColor(Color(hex: "#94A684")) // Using the green color you provided
+                    .foregroundColor(Color(hex: "#94A684"))
                 Image(systemName: "eurosign.circle.fill")
                     .resizable()
                     .scaledToFit()
@@ -27,20 +27,19 @@ struct AccountDetailView: View {
             }
             .padding(.top)
             
-            // Display recent transactions
             VStack(alignment: .leading, spacing: 10) {
                 Text("Recent Transactions")
                     .font(.headline)
                     .padding([.horizontal])
-                ForEach(viewModel.recentTransactions, id: \.description) { transaction in
+                ForEach(viewModel.recentTransactions) { transaction in
                     HStack {
-                        Image(systemName: transaction.amount.contains("+") ? "arrow.up.right.circle.fill" : "arrow.down.left.circle.fill")
-                            .foregroundColor(transaction.amount.contains("+") ? .green : .red)
-                        Text(transaction.description)
+                        Image(systemName: transaction.value > 0.0 ? "arrow.up.right.circle.fill" : "arrow.down.left.circle.fill")
+                            .foregroundColor(transaction.value > 0.0 ? .green : .red)
+                        Text(transaction.label)
                         Spacer()
-                        Text(transaction.amount)
+                        Text("\(transaction.value)")
                             .fontWeight(.bold)
-                            .foregroundColor(transaction.amount.contains("+") ? .green : .red)
+                            .foregroundColor(transaction.value > 0.0 ? .green : .red)
                     }
                     .padding()
                     .background(Color.gray.opacity(0.1))
@@ -49,7 +48,6 @@ struct AccountDetailView: View {
                 }
             }
             
-            // Button to see details of transactions
             Button(action: {
                 // Implement action to show transaction details
             }) {
@@ -67,12 +65,12 @@ struct AccountDetailView: View {
             Spacer()
         }
         .onTapGesture {
-                    self.endEditing(true)  // This will dismiss the keyboard when tapping outside
-                }
+            self.endEditing(true)
+        }
     }
         
 }
 
 #Preview {
-    AccountDetailView(viewModel: AccountDetailViewModel())
+    AccountDetailView(viewModel: AccountDetailViewModel(token: ""))
 }

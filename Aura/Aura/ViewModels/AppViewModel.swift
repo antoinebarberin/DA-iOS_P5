@@ -9,6 +9,7 @@ import Foundation
 
 class AppViewModel: ObservableObject {
     @Published var isLogged: Bool
+    var token: String = ""
     
     init() {
         isLogged = false
@@ -18,7 +19,9 @@ class AppViewModel: ObservableObject {
            return AuthenticationViewModel(
                onLoginSucceed: { [weak self] token in
                    print("Login succeeded with token: \(token)")
+                   self?.token = token
                    self?.isLogged = true
+                   
                },
                onLoginFailed: {
                    print("Login failed")
@@ -27,6 +30,6 @@ class AppViewModel: ObservableObject {
        }
     
     var accountDetailViewModel: AccountDetailViewModel {
-        return AccountDetailViewModel()
+        return AccountDetailViewModel(token: token)
     }
 }
