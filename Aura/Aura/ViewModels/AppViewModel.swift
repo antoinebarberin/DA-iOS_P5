@@ -32,4 +32,8 @@ class AppViewModel: ObservableObject {
     var accountDetailViewModel: AccountDetailViewModel {
         return AccountDetailViewModel(token: token)
     }
+    
+    var allTransactionsViewModel: AllTransactionsViewModel{
+        return AllTransactionsViewModel(token: token)
+    }
 }

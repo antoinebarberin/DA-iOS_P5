@@ -1,20 +1,19 @@
 //
-//  AccountDetailView.swift
+//  AllTransactionsView.swift
 //  Aura
 //
-//  Created by Vincent Saluzzo on 29/09/2023.
+//  Created by Antoine Barberin on 05/07/2024.
 //
 
 import SwiftUI
 
-struct AccountDetailView: View {
-    @ObservedObject var viewModel: AccountDetailViewModel
+struct AllTransactionsView: View {
+    @ObservedObject var viewModel: AllTransactionsViewModel
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var viewModelAll: AllTransactionsViewModel
 
     var body: some View {
-        NavigationStack{
-            VStack(spacing: 20) {
+        ScrollView{
+            LazyVStack(spacing: 20) {
                 VStack(spacing: 10) {
                     Text("Your Balance")
                         .font(.headline)
@@ -50,20 +49,8 @@ struct AccountDetailView: View {
                     }
                 }
                 
-                NavigationLink(destination: AllTransactionsView(viewModel: viewModelAll)){
-                    HStack {
-                        Image(systemName: "list.bullet")
-                        Text("See Transaction Details")
-                    }
-                    .padding()
-                    .background(Color(hex: "#94A684"))
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
-                }
-                .padding([.horizontal, .bottom])
-                
-                Spacer()
             }
+            
             .onTapGesture {
                 self.endEditing(true)
             }
@@ -75,3 +62,4 @@ struct AccountDetailView: View {
 #Preview {
     AccountDetailView(viewModel: AccountDetailViewModel(token: ""), viewModelAll: AllTransactionsViewModel(token: ""))
 }
+

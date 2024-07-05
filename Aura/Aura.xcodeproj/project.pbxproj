@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1F01DA782C3576FC002B5275 /* AccountDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DA772C3576FC002B5275 /* AccountDetailService.swift */; };
+		1F01DA7A2C37F005002B5275 /* AllTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DA792C37F005002B5275 /* AllTransactionsView.swift */; };
+		1F01DA7C2C37F093002B5275 /* AllTransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DA7B2C37F093002B5275 /* AllTransactionsViewModel.swift */; };
 		1FD66F242C29AD73005D5007 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD66F232C29AD73005D5007 /* AuthenticationService.swift */; };
 		53D4187C2AC7099A0070ADB1 /* AuraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D4187B2AC7099A0070ADB1 /* AuraApp.swift */; };
 		53D418802AC7099B0070ADB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D4187F2AC7099B0070ADB1 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		1F01DA772C3576FC002B5275 /* AccountDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailService.swift; sourceTree = "<group>"; };
+		1F01DA792C37F005002B5275 /* AllTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsView.swift; sourceTree = "<group>"; };
+		1F01DA7B2C37F093002B5275 /* AllTransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsViewModel.swift; sourceTree = "<group>"; };
 		1FD66F232C29AD73005D5007 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		53D418782AC7099A0070ADB1 /* Aura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D4187B2AC7099A0070ADB1 /* AuraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuraApp.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 				53D418902AC70A920070ADB1 /* AuthenticationView.swift */,
 				53D418922AC70AB10070ADB1 /* AccountDetailView.swift */,
 				53D418942AC70ABF0070ADB1 /* MoneyTransferView.swift */,
+				1F01DA792C37F005002B5275 /* AllTransactionsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 				53D4189A2AC711990070ADB1 /* AuthenticationViewModel.swift */,
 				53D4189C2AC715AA0070ADB1 /* AccountDetailViewModel.swift */,
 				53D4189E2AC717890070ADB1 /* MoneyTransferViewModel.swift */,
+				1F01DA7B2C37F093002B5275 /* AllTransactionsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -205,6 +211,8 @@
 				53D4189D2AC715AA0070ADB1 /* AccountDetailViewModel.swift in Sources */,
 				1FD66F242C29AD73005D5007 /* AuthenticationService.swift in Sources */,
 				53D418912AC70A920070ADB1 /* AuthenticationView.swift in Sources */,
+				1F01DA7A2C37F005002B5275 /* AllTransactionsView.swift in Sources */,
+				1F01DA7C2C37F093002B5275 /* AllTransactionsViewModel.swift in Sources */,
 				53D418932AC70AB10070ADB1 /* AccountDetailView.swift in Sources */,
 				53D4189F2AC717890070ADB1 /* MoneyTransferViewModel.swift in Sources */,
 				53D4188D2AC709F40070ADB1 /* AppViewModel.swift in Sources */,
