@@ -36,7 +36,7 @@ struct MoneyTransferView: View {
             VStack(alignment: .leading) {
                 Text("Recipient (Email or Phone)")
                     .font(.headline)
-                TextField("Enter recipient's info", text: $viewModel.recipient)
+                EntryFields(placeHolder: "Enter recipient's info", field: $viewModel.recipient, isSecure: false, prompt: viewModel.RecipientPrompt)
                     .padding()
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(8)
@@ -46,7 +46,7 @@ struct MoneyTransferView: View {
             VStack(alignment: .leading) {
                 Text("Amount (€)")
                     .font(.headline)
-                TextField("0.00", text: $amountText)
+                EntryFields(placeHolder: "0.00", field: $amountText, isSecure: false, prompt: viewModel.AmountPrompt)
                     .padding()
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(8)
@@ -74,6 +74,8 @@ struct MoneyTransferView: View {
                 .cornerRadius(8)
             }
             .buttonStyle(PlainButtonStyle())
+            .opacity(viewModel.isSignupComplete ? 1 : 0.6)
+            .disabled(!viewModel.isSignupComplete)
 
             // Message
             if !viewModel.transferMessage.isEmpty {
